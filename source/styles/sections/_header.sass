@@ -1,2 +1,53 @@
 header
-  background-color: green
+  background-color: $green
+  height: 90px
+  min-width: 1200px
+  box-shadow: 0 5px 5px 0 rgba(black, .2)
+
+
+.user
+  float: left
+
+  &__image
+    margin-left: 30px
+    margin-top: 15px
+    float: left
+    border-radius: 50%
+  &__info
+    margin-left: 18px
+    margin-top: 22px
+    float: left
+  &__name
+    display: block
+    font-family: $ff-medium
+    font-size: 21px
+    line-height: 1
+    color: #fff
+  &__email
+    display: block
+    font-size: 14px
+    line-height: 1
+    color: #fff
+    opacity: .7
+    margin-top: 7px
+
+
+.socials
+  height: 90px
+  line-height: 85px
+  float: right
+  margin-right: 30px
+  &__link
+    display: inline-block
+    height: 30px
+    margin-left: 20px
+
+  &__icon
+    vertical-align: middle
+    fill: #fff
+    opacity: .7
+    transition: opacity .3s ease
+    &:hover
+      opacity: 1
+
+

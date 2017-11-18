@@ -5,49 +5,21 @@ html
 *, *:before, *:after
   box-sizing: inherit
 
-*::-webkit-input-placeholder
-  color: #666
-  opacity: 1
-
-*:-moz-placeholder
-  color: #666
-  opacity: 1
-
-*::-moz-placeholder
-  color: #666
-  opacity: 1
-
-*:-ms-input-placeholder
-  color: #666
-  opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-  color: #666
-
-body input:required:valid,
-body textarea:required:valid
-  color: #666
-
 html, body
   height: 100%
+  margin: 0
 
 body
-  display: flex
-  flex-direction: column
+
   margin: 0
   font-size: 16px
   min-width: 320px
   position: relative
-  line-height: 1.75
+  line-height: 1.5
   font-family: $ff
-  overflow-x: hidden
-  opacity: 1
+  color: $gray
 
-h1, h2, h3, h4, h5, h6
-  margin-top: 0
-  margin-bottom: 0
-  font-weight: normal
+
 
 .img-responsive
   display: block
@@ -55,16 +27,21 @@ h1, h2, h3, h4, h5, h6
   height: auto
 
 .clearfix
-  *zoom: 1
-
-  &:before, &:after
-    content: " "
-    display: table
-
   &:after
+    content: ''
+    display: table
     clear: both
+  //  *zoom: 1
 
+  // &:before, &:after
+  //   content: " "
+  //   display: table
 
+  // &:after
+  //   clear: both
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
 
 ul
   padding: 0
@@ -75,6 +52,35 @@ p
   margin: 0
 
 
-a
-  text-decoration: none
+.wrapper
+  min-height: 100%
+  margin-bottom: -70px
+
+
+
+.main-header__container
+  width: 1200px
+  min-width: 1200px
+  margin: 0 auto
+
+.container
+  width: 1200px
+  min-width: 1200px
+  margin: 0 auto
+  padding: 0 130px
+.section
+  padding: 80px 0
+
+.s-title
+  text-align: center
+  margin-bottom: 37px
+  &__main
+    font-size: 42px
+    font-family: $ff-medium
+    margin-bottom: 5px
+    color: $dark-gray
+  &__desc
+    text-align: center
+    font-size: 21px
+    font-family: $ff-light
 

@@ -1,0 +1,104 @@
+.s-courses
+  margin-bottom: 65px
+  background-image: url("../images/pattern.png")
+
+.course
+
+  box-shadow: 0 1px 5px 0 rgba(black, .2)
+  float: left
+  width: 300px
+  margin-right: 20px
+  margin-bottom: 22px
+  &:nth-child(3n)
+    margin-right: 0
+
+  &__info
+    padding: 15px 20px 20px
+    background-color: #fff
+
+  &__title
+
+    margin-bottom: 4px
+
+  &__link
+    text-decoration: none
+    font-family: $ff
+    font-size: 21px
+    color: $dark-gray
+    transition: color .2s ease
+    &:hover
+      color: $green
+
+  &__text
+    margin-bottom: 10px
+
+  &__img-wrap
+    height: 170px
+    width: 100%
+
+  &__image
+    max-width: 100%
+    max-height: 100%
+    display: block
+
+
+// checkbox style
+
+
+.course__check
+  padding: 20px
+  background-color: $light-gray
+.viewed
+  width: 20px
+  height: 20px
+  position: relative
+  background: #fff
+  border: 2px solid $gray
+  border-radius: 2px
+  transition: opacity .3s ease
+  label
+    width: 20px
+    height: 20px
+    cursor: pointer
+    position: absolute
+    left: -2px
+    top: -2px
+    border-radius: 2px
+
+    &:after
+      @include center(both)
+      font-family: fontawesome
+      content: '\f00c'
+      color: #fff
+      font-size: 15px
+
+      opacity: 0
+      transition: opacity .15s ease
+    &:hover
+      background: $green
+      & > span
+        color: $green
+      &::after
+        opacity: 0.4
+    & > span
+      padding-left: 25px
+      font-size: 18px
+      line-height: 18px
+
+  input[type=checkbox]
+    width: .1px
+    height: .1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+
+    &:checked + label
+      background: $green
+      & > span
+        color: $green
+      &::after
+        opacity: 1
+
+
+
