@@ -62,6 +62,7 @@ gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images', 'copy:scripts'));
 gulp.task('watch', function() {
   gulp.watch('source/template/**/*.pug', gulp.series('templates:compile'));
   gulp.watch('source/styles/**/*.sass', gulp.series('styles:compile'));
+  gulp.watch('source/js/**/*.js', gulp.series('copy'));
 });
 
 gulp.task('default', gulp.series(

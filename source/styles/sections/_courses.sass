@@ -1,17 +1,31 @@
 .s-courses
+  min-width: 1200px
   margin-bottom: 65px
   background-image: url("../images/pattern.png")
 
 .course
-
+  box-sizing: border-box
+  display: inline-block
+  vertical-align: top
+  position: relative
   box-shadow: 0 1px 5px 0 rgba(black, .2)
-  float: left
   width: 300px
-  margin-right: 20px
-  margin-bottom: 22px
-  &:nth-child(3n)
-    margin-right: 0
+  margin: 8px
 
+  // &:nth-child(4n)
+  //   clear: both
+
+
+  &__overlay
+    position: absolute
+    display: block
+    top: 0
+    right: 0
+    left: 0
+    height: 0%
+    background-color: rgba($green, .2)
+    z-index: 999
+    transition: height 1s ease-in
   &__info
     padding: 15px 20px 20px
     background-color: #fff
@@ -26,15 +40,31 @@
     font-size: 21px
     color: $dark-gray
     transition: color .2s ease
-    &:hover
+  &:hover
+    .course__link
       color: $green
+    .course__img-wrap:after
+      opacity: 1
+
 
   &__text
     margin-bottom: 10px
 
   &__img-wrap
+    position: relative
     height: 170px
     width: 100%
+    transition: opacity .15s ease-in-out
+    &:after
+      position: absolute
+      display: block
+      content: ''
+      height: 5px
+      bottom: 0
+      right: 0
+      left: 0
+      background-color: $green
+      opacity: 0
 
   &__image
     max-width: 100%
